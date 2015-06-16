@@ -15,6 +15,8 @@ end
 
 gem 'pry-rails'
 
+gem 'faker'
+
 gem 'bootstrap-sass'
 
 gem 'sass-rails', '~> 5.0'
