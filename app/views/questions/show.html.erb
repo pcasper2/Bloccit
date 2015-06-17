@@ -1,0 +1,10 @@
+<h1><%= @question.title %></h1>
+
+<p><%= @question.body %></p>
+<p><%= check_box("question", "resolved") %> Is this resolved?</p>
+<p>
+  <div class="btn-group">
+    <%= link_to "Edit", edit_question_path(@question), class: "btn btn-success" %>
+    <%= link_to "Delete", @question, method: :delete, class: "btn btn-danger" %>
+  </div>
+</p>
