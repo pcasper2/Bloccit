@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
 
   before_action :configure_permitted_parameters, if: :devise_controller?
 
-  before_action :flash_attack
+  #before_action :flash_attack
 
   protected
 
@@ -11,9 +11,9 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.for(:sign_up) << :name
   end
 
-  def flash_attack
-    flash[:notice] = "asssignment application flash"
-  end
+  #def flash_attack
+  #  flash[:notice] = "asssignment application flash"
+  #end
 
 
 
