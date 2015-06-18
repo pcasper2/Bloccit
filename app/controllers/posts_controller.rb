@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+  before_action :flash_attack
+  skip_before_action :flash_attack, only: [:index, :new]
   def index
     @posts = Post.all
   end
@@ -36,4 +38,11 @@ class PostsController < ApplicationController
       render :edit
     end
   end
+
+  protected
+
+  def flash_attack
+    flash[:notice] = "assignment post only flash"
+  end
+
 end
