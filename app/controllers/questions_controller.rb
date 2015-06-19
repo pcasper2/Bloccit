@@ -47,5 +47,14 @@ class QuestionsController < ApplicationController
     end
   end
 
+  def complete
+    @question = Question.find(params[:question_id])
+    @question.resolved = true
+    @question.save
+    redirect_to @question, notice: "Question was answered"
+  end
+
+
+
 
 end

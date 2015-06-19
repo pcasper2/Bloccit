@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
 
   devise_for :users
-  resources :questions
+  resources :questions do
+    put :complete
+  end
 
   resources :posts
 

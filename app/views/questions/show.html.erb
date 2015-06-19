@@ -1,7 +1,9 @@
-<h1><%= @question.title %></h1>
+<h1><%= @question.title %><small><%= "Resolved" if @question.resolved %></small></h1>
 
 <p><%= @question.body %></p>
-<p><%= check_box("question", "resolved") %> Is this resolved?</p>
+<p>
+  <%= link_to "Resolved?", question_complete_path(@question), method: :put, class: "btn btn-success" %>
+</p>
 <p>
   <div class="btn-group">
     <%= link_to "Edit", edit_question_path(@question), class: "btn btn-success" %>
