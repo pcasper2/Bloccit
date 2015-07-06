@@ -1,6 +1,8 @@
 class PostsController < ApplicationController
   #before_action :flash_attack
   #skip_before_action :flash_attack, only: [:index, :new]
+
+
   
 
 #removed PostsController#index when I added topics.
@@ -57,7 +59,7 @@ class PostsController < ApplicationController
   private 
 
   def post_params
-    params.require(:post).permit(:title, :body)
+    params.require(:post).permit(:title, :body, :image, :image_cache)
   end
 
 
