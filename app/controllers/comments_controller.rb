@@ -1,6 +1,6 @@
 class CommentsController < ApplicationController
   def create
-    @user = User.find(params[:user_id])
+    #@user = User.find(params[:user_id])
     @post = Post.find(params[:post_id])
     @comment = current_user.comments.build(comment_params)
     @comment.post = @post
@@ -16,7 +16,7 @@ class CommentsController < ApplicationController
   end
 
   def destroy
-    @topic = Topic.find(params[:topic_id])
+    #@topic = Topic.find(params[:topic_id])
     @post = Post.find(params[:post_id])
     @comment = @post.comments.find(params[:id])
 
@@ -28,7 +28,7 @@ class CommentsController < ApplicationController
       flash[:error] = "There was a problem removing the comment."
     end
 
-    redirect_to [@topic, @post]
+    redirect_to [@post.topic, @post]
   end
 
 
