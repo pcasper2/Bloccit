@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get 'summaries/index'
 
   devise_for :users
-  resources :users, only: [:update]
+  resources :users, only: [:update, :show]
   resources :questions do
     put :complete
   end
