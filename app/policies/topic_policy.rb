@@ -6,7 +6,7 @@ class TopicPolicy < ApplicationPolicy
   def show?
     record.public? || user.present?
   end
-  
+
 
   def create?
     user.present? && user.admin?

@@ -10,6 +10,7 @@
 # you'll amass, the slower it'll run and the greater likelihood for issues).
 #
 # It's strongly recommended that you check this file into your version control system.
+rails g model Favorite user:references post:references
 
 ActiveRecord::Schema.define(version: 20150722210520) do
 
