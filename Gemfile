@@ -20,6 +20,11 @@ group :development, :test do
   gem 'capybara'
 end
 
+gem 'puma', group: :production
+
+gem 'puma', group: :development 
+
+gem 'newrelic_rpm'
 
 gem 'pry-rails'
 
