@@ -24,6 +24,8 @@ gem 'puma', group: :production
 
 gem 'puma', group: :development 
 
+gem 'factory_girl_rails', '~> 4.0'
+
 gem 'newrelic_rpm'
 
 gem 'pry-rails'
