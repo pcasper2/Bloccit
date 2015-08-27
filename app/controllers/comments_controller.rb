@@ -28,7 +28,11 @@ class CommentsController < ApplicationController
       flash[:error] = "There was a problem removing the comment."
     end
 
-    redirect_to [@post.topic, @post]
+    respond_to do |format|
+      format.html
+      format.js
+    end
+    
   end
 
 
